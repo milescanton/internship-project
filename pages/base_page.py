@@ -85,7 +85,6 @@ class Page:
             message=f'Expected {expected_partial_url} not in {self.driver.current_url}.'
         )
 
-
     def verify_partial_text(self, expected_partial_text, *locator):
         actual_text = self.find_element(*locator).text
         assert expected_partial_text in actual_text, \
