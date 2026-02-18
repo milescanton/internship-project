@@ -6,11 +6,33 @@ from app.application import Application
 
 def browser_init(context, scenario_name):
 
+    #Chrome
     context.driver = webdriver.Chrome()
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
     context.driver.wait = WebDriverWait(context.driver, timeout=10)
     context.app = Application(context.driver)
+
+
+    #Firefox
+    # context.driver = webdriver.Firefox()
+    # context.driver.maximize_window()
+    # context.driver.implicitly_wait(4)
+    # context.driver.wait = WebDriverWait(context.driver, timeout=10)
+    # context.app = Application(context.driver)
+
+
+    #Chrome - headless
+    # options = webdriver.ChromeOptions()
+    # options.add_argument("--headless=new")
+    # options.add_argument("--window-size=1920,1080")
+    # context.driver = webdriver.Chrome(
+    #     options=options
+    # )
+    #
+    # context.driver.implicitly_wait(4)
+    # context.driver.wait = WebDriverWait(context.driver, timeout=10)
+    # context.app = Application(context.driver)
 
 
 def before_scenario(context, scenario):

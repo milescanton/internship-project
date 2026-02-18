@@ -5,7 +5,7 @@ from time import sleep
 
 class IndexPage(Page):
 
-    SETTINGS = (By.CSS_SELECTOR, "a[href='/settings']")
+    SETTINGS = (By.CSS_SELECTOR, "a[href='https://soft.reelly.io/settings']")
 
     def click_on_settings(self):
         sleep(3)

@@ -12,7 +12,7 @@ def add_and_verify_info(context):
         "country": "United States",
         "project_name": "Task 2",
         "phone": "1234567890",
-        "email": "cantonmiles.com"
+        "email": "cantonmiles@gmail.com"
     }
 
     context.app.add_project_page.add_info(project_data)
